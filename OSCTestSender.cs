@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 public class OSCTestSender : MonoBehaviour
 {
-
     private Osc oscHandler;
 
     public string remoteIp;
@@ -31,10 +30,9 @@ public class OSCTestSender : MonoBehaviour
         OscMessage oscM = Osc.StringToOscMessage("/looking 1.0");
         oscHandler.Send(oscM);
     }
+
     void Start()
     {
-
-
         UDPPacketIO udp = GetComponent<UDPPacketIO>();
         udp.init(remoteIp, sendToPort, listenerPort);
 
